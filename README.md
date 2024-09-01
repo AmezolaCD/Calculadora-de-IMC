@@ -1,4 +1,4 @@
-# Calculadora-de-IMC
+# Calculadora-de-IMC v 1.1
 
 1. Función get_non_empty_input
 
