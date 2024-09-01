@@ -1,12 +1,19 @@
 # Calculadora-de-IMC
+
 1. Función get_non_empty_input
 
 def get_non_empty_input(prompt):
+    
     """Solicita al usuario que ingrese un valor no vacío."""
+    
     while True:
+        
         value = input(prompt).strip()
+       
         if value:
+            
             return value
+        
         print("El campo no puede estar vacío. Por favor, intenta nuevamente.")
 
 Propósito: Esta función solicita que ingrese un texto que no puede estar vacío.
@@ -17,7 +24,7 @@ Usa un bucle while True para repetirse hasta que se obtenga un valor válido.
 input(prompt) solicita al usuario una entrada con el mensaje proporcionado (prompt).
 
 strip() elimina los espacios en blanco al principio y al final de la entrada.
-Si el valor no está vacío, se retorna. Si está vacío, se muestra un mensaje de error y la función vuelve a solicitar la entrada.
+Si el valor no está vacío, se retorna. Si está vacío, arroja un mensaje de error y la función vuelve a solicitar la entrada.
 
 2. Función get_numeric_input
 
@@ -50,7 +57,8 @@ def get_numeric_input(prompt, tipo=float, min_val=None, max_val=None):
             
             print("Debes ingresar un número válido. Por favor, intenta nuevamente.")
 
-Propósito: Solicita al usuario un número, verificando que sea válido (un entero o un flotante) y opcionalmente dentro de un rango específico.
+Propósito: Solicita al usuario un número, verificando que sea válido (un entero o un decimal) y opcionalmente dentro de un rango definido.
+
 Parámetros:
 
 prompt: Mensaje que se muestra al usuario.
