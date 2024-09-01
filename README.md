@@ -50,18 +50,8 @@ def calcular_imc(peso, altura):
     """Calcula el índice de masa corporal (IMC) basado en el peso (kg) y la altura (m)."""
     return peso / (altura ** 2)
 Propósito: Calcula el índice de masa corporal (IMC) usando la fórmula:
-IMC
-=
-peso (kg)
-altura (m)
-2
-IMC= 
-altura (m) 
-2
- 
-peso (kg)
-​
- 
+IMC = peso (kg)/(altura (m))**2
+
 Parámetros:
 peso: El peso de la persona en kilogramos.
 altura: La altura de la persona en metros.
