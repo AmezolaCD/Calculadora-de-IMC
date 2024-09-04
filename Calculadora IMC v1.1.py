@@ -6,7 +6,7 @@ def Inserta_un_valor_valido(prompt):
             return value
         print("El campo no puede estar vacío. Por favor, intenta nuevamente.")
 
-def get_numeric_input(prompt, tipo=float, min_val=None, max_val=None):
+def recibir_input_numerico(prompt, tipo=float, min_val=None, max_val=None):
     """
     Solicita al usuario que ingrese un valor numérico válido de un tipo específico.
     Puede especificar un valor mínimo y máximo.
@@ -48,12 +48,12 @@ def solicitar_datos_usuario():
     """Solicita los datos personales del usuario y retorna un diccionario con los valores ingresados."""
     print("Por favor, introduce tus datos personales.")
     datos = {
-        "nombre": get_non_empty_input("Nombre: "),
-        "apellido_paterno": get_non_empty_input("Apellido paterno: "),
-        "apellido_materno": get_non_empty_input("Apellido materno: "),
-        "edad": get_numeric_input("Edad (años): ", int, 0),
-        "peso": get_numeric_input("Peso (kg): ", float, 0),
-        "altura": get_numeric_input("Altura (m): ", float, 0.5, 2.5)
+        "nombre": Inserta_un_valor_valido("Nombre: "),
+        "apellido_paterno": Inserta_un_valor_valido("Apellido paterno: "),
+        "apellido_materno": Inserta_un_valor_valido("Apellido materno: "),
+        "edad": recibir_input_numerico("Edad (años): ", int, 0),
+        "peso": recibir_input_numerico("Peso (kg): ", float, 0),
+        "altura": recibir_input_numerico("Altura (m): ", float, 0.5, 2.5)
     }
     return datos
 
