@@ -1,8 +1,8 @@
 # Calculadora-de-IMC v 1.1
 
-1. Función get_non_empty_input
+1. Función Inserta_un_valor_valido
 
-def get_non_empty_input(prompt):
+def Inserta_un_valor_valido(prompt):
     
     """Solicita al usuario que ingrese un valor no vacío."""
     
@@ -26,9 +26,9 @@ input(prompt) solicita al usuario una entrada con el mensaje proporcionado (prom
 strip() elimina los espacios en blanco al principio y al final de la entrada.
 Si el valor no está vacío, se retorna. Si está vacío, arroja un mensaje de error y la función vuelve a solicitar la entrada.
 
-2. Función get_numeric_input
+2. Función recibir_input_numerico
 
-def get_numeric_input(prompt, tipo=float, min_val=None, max_val=None):
+def recibir_input_numerico(prompt, tipo=float, min_val=None, max_val=None):
     
     """Solicita al usuario que ingrese un valor numérico válido de un tipo específico.
     Puede especificar un valor mínimo y máximo."""
@@ -156,17 +156,17 @@ def solicitar_datos_usuario():
     
     datos = {
         
-        "nombre": get_non_empty_input("Nombre: "),
+        "nombre": Inserta_un_valor_valido("Nombre: "),
         
-        "apellido_paterno": get_non_empty_input("Apellido paterno: "),
+        "apellido_paterno": Inserta_un_valor_valido("Apellido paterno: "),
         
-        "apellido_materno": get_non_empty_input("Apellido materno: "),
+        "apellido_materno": Inserta_un_valor_valido("Apellido materno: "),
         
-        "edad": get_numeric_input("Edad (años): ", int, 0),
+        "edad": recibir_input_numerico("Edad (años): ", int, 0)
         
-        "peso": get_numeric_input("Peso (kg): ", float, 0),
+        "peso": recibir_input_numerico("Peso (kg): ", float, 0),
         
-        "altura": get_numeric_input("Altura (m): ", float, 0.5, 2.5)
+        "altura": recibir_input_numerico("Altura (m): ", float, 0.5, 2.5)
    
     }
     
