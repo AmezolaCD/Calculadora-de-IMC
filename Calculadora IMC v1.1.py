@@ -1,4 +1,4 @@
-def get_non_empty_input(prompt):
+def Inserta_un_valor_valido(prompt):
     """Solicita al usuario que ingrese un valor no vacío."""
     while True:
         value = input(prompt).strip()
